@@ -1,7 +1,7 @@
-function insertionSort(array) {
+function Insertion(array) {
     const moves = [];
     let i, key, j; 
-    for (i = 1; i < array.length; i++)
+    for (i = 1; i < actual_array_size; i++)
     { 
         
         key = array[i]; 
@@ -9,17 +9,18 @@ function insertionSort(array) {
         
         while (j >= 0 && array[j] > key)
         {   
-            array[j + 1] = array[j]; 
+            
             moves.push({
                 indices: [j+1,j],
                 type: "swap"
-            }); 
-            j = j - 1;
+            });
+            array[j + 1] = array[j]; 
+            j = j - 1; 
         } 
         array[j + 1] = key; 
         moves.push({
             indices: [j+1,key],
-            type: "noswap"
+            type: "noSwap"
         });
         
         
