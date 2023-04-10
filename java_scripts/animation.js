@@ -22,24 +22,7 @@ function handlespeed() {
     value_of_speed_slider.innerHTML = (speed/1000) + " sec";
 }
 
-function insertionAnimation(moves) {
-    if(moves.length === 0) {
-        generateBars();
-        return;
-    }
-    const move = moves.shift();
-    const [i,j] = move.indices;
-    if(move.type === "changeHeight") {
-        array[i] = array[j];
-    }
-    else if(move.type === "swap") {
-        array[i] = j;
-    }
-    generateBars(move);
-    setTimeout(function(){
-        insertionAnimation(moves);
-    },1000);
-}
+
 
 // Let's animate bars
 function animateBars(moves) {
