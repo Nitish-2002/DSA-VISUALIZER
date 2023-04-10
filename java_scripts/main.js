@@ -89,7 +89,7 @@ function callAlgo() {
             animateBars(moves1);
             break;
         case "Insertion":
-            const moves2 = insertionSort(copy);
+            const moves2 = Insertion(copy);
             animateBars(moves2);
             break;
     }
