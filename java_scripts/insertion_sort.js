@@ -2,7 +2,7 @@ function Insertion(array) {
     const moves = [];
     let i, key, j; 
     for (i = 1; i < actual_array_size; i++)
-    { 
+    {
         
         key = array[i]; 
         j = i - 1; 
