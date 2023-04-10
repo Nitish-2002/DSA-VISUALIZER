@@ -9,19 +9,18 @@ function insertionSort(array) {
         
         while (j >= 0 && array[j] > key)
         {   
-            
+            array[j + 1] = array[j]; 
             moves.push({
                 indices: [j+1,j],
-                type: "noswap"
-            });
-            array[j + 1] = array[j]; 
-            j = j - 1; 
+                type: "swap"
+            }); 
+            j = j - 1;
         } 
+        array[j + 1] = key; 
         moves.push({
             indices: [j+1,key],
-            type: "swap"
+            type: "noswap"
         });
-        array[j + 1] = key; 
         
         
     } 
